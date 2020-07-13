@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.4;
+  height: 100vh;
+  background-color: #fcfcfc;
+  color: #1f1f1f;
+}
+h1 {
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 27px;
+}
+.meme-container {
+  height: 100vh;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-container {
   display: flex;
   flex-direction: column;
+  justify-content: center; 
   align-items: center;
+  min-width: max-content;
+  background: #ad1457;
+  border-radius: 25px;
+  color: #fff;
+}
+
+ .second {
+  margin: 0 3rem;
+  background: #fff;
+  max-height: 100vh;
+}
+
+.second p {
+  margin: 10px;
+}
+
+.form-container h1 {
+  margin: 10px;
+}
+form {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 20px;
+}
+input,
+button {
+  width: 90%;
+  height: 40px;
+  margin-bottom: 5px;
+  border: none;
+  outline: none;
+}
+input {
+  padding: 5px 8px;
+}
+button {
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #ad1457;
+  font-weight: bold;
+}
+.meme {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+
+}
+.meme > img {
+  max-height: 100vh;
+  max-width: 500px;
+  background: cover;
+  margin-bottom: -5px;
+  background-repeat: no-repeat;
+}
+.meme > h2 {
+  position: absolute;
+  font-size: 36px;
+  width: auto;
+  text-align: center;
+  left: 49%;
+  transform: translateX(-50%);
+  margin: 0.3em 0;
+  padding: 0;
+  font-family: impact, sans-serif;
+  text-transform: uppercase;
   color: white;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+    2px 2px 5px #000;
+}
+.meme > .top {
+  top: 0.1em;
+}
+.meme > .bottom {
+  bottom: 0.1em;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* On screens that are 768px or less */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+    margin-bottom: 14px;
   }
-  to {
-    transform: rotate(360deg);
+  .meme-container {
+    flex-direction: column;
+  }
+  .meme > h2 {
+    font-size: 30px;
   }
 }
